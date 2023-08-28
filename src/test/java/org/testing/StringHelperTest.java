@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class StringHelperTest {
     StringHelper stringHelper = new StringHelper();
 
-    /* @Before */
+    // @Before
     @BeforeClass
     public static void printStartOfClass(){
         System.out.println("Starting of helper class");
@@ -59,7 +59,7 @@ public class StringHelperTest {
         assertFalse(stringHelper.areFirstAndLastTwoCharactersTheSame("B"));
     }
 
-    /* @After */
+    // @After
     @After
     public void printAfterEveryTest(){
         System.out.println("End of the test");
@@ -69,5 +69,18 @@ public class StringHelperTest {
     public static void printAfterClass(){
         System.out.println("Print end of helper class");
     }
+
+    // Testing Arrays
+
+    int[] actualNumbers = {1,90,65,23};
+    int[] expectedResult = {1,23,65,90};
+    @Test
+    public void testingArrays(){
+        assertArrayEquals(expectedResult,stringHelper.numberSort(actualNumbers));
+    }
+
+
+
+
 
 }

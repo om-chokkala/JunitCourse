@@ -1,4 +1,7 @@
 package org.testing;
+
+import java.util.Arrays;
+
 public class StringHelper {
 	public String truncateAInFirst2Positions(String str) {
 		if (str.length() <= 2)
@@ -21,6 +24,11 @@ public class StringHelper {
 		String last2Chars = str.substring(str.length() - 2);
 
 		return first2Chars.equals(last2Chars);
+	}
+
+	public int[] numberSort(int[] number){
+		Arrays.sort(number);
+		return number;
 	}
 
 }
