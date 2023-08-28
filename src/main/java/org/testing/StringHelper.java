@@ -18,7 +18,6 @@ public class StringHelper {
 			return true;
 
 		String first2Chars = str.substring(0, 2);
-
 		String last2Chars = str.substring(str.length() - 2);
 
 		return first2Chars.equals(last2Chars);
