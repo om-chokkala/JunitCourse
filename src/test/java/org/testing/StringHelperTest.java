@@ -84,8 +84,18 @@ public class StringHelperTest {
     // Testing Exceptions
     int[] inputArrayForException = null;
     @Test(expected = NullPointerException.class)
-    public void testingNullInput(){
+    public void testingNullpointerException(){
         Arrays.sort(inputArrayForException);
+    }
+    // Performance testing by setting time limit to execute the method under test
+
+    @Test(timeout = 100)
+    public void performanceTesting_timeout(){
+        for(int i = 0; i <1000000 ; i++){
+           actualNumbers[0] = i;
+            Arrays.sort(actualNumbers);
+        }
+
     }
 
 
