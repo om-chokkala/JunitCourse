@@ -4,6 +4,9 @@ import org.junit.*;
 
 import javax.xml.transform.stream.StreamSource;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 
@@ -71,12 +74,18 @@ public class StringHelperTest {
     }
 
     // Testing Arrays
-
     int[] actualNumbers = {1,90,65,23};
     int[] expectedResult = {1,23,65,90};
     @Test
     public void testingArrays(){
         assertArrayEquals(expectedResult,stringHelper.numberSort(actualNumbers));
+    }
+
+    // Testing Exceptions
+    int[] inputArrayForException = null;
+    @Test(expected = NullPointerException.class)
+    public void testingNullInput(){
+        Arrays.sort(inputArrayForException);
     }
 
 
